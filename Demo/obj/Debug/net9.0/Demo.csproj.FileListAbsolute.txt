@@ -4738,3 +4738,4 @@ C:\Users\malawy\Desktop\copy Demo\Demo\Demo\bin\Debug\net9.0\ru\Microsoft.CodeAn
 C:\Users\malawy\Desktop\copy Demo\Demo\Demo\bin\Debug\net9.0\tr\Microsoft.CodeAnalysis.Scripting.resources.dll
 C:\Users\malawy\Desktop\copy Demo\Demo\Demo\bin\Debug\net9.0\zh-Hans\Microsoft.CodeAnalysis.Scripting.resources.dll
 C:\Users\malawy\Desktop\copy Demo\Demo\Demo\bin\Debug\net9.0\zh-Hant\Microsoft.CodeAnalysis.Scripting.resources.dll
+C:\Users\malawy\Desktop\copy Demo\Demo\Demo\obj\Debug\net9.0\Demo.sourcelink.json
