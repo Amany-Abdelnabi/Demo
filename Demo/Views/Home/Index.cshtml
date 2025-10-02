@@ -1,0 +1,122 @@
+﻿
+
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Beautiful Clean Page</title>
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background: linear-gradient(135deg, #e0eafc, #cfdef3);
+            color: #333;
+        }
+
+        header {
+            background: #4a90e2;
+            color: white;
+            padding: 1rem 2rem;
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin-bottom: 2rem;
+            color: #555;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #4a90e2;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+
+            .btn:hover {
+                background: #357ABD;
+                transform: scale(1.05);
+            }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background: #f1f1f1;
+            font-size: 0.9rem;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <header>
+              Welcome Demo
+    </header>
+
+    <main>
+        <h1>Welcome to Home Demo</h1>
+        <p>
+            Smartphones have become an important part of our daily lives. They allow us to communicate with others, access the internet, take photos, 
+            and use many helpful applications. With a smartphone, we can work, study, and entertain ourselves anywhere.
+            They make life easier, but we should also use them wisely to avoid spending too much time on them.
+        </p>
+   <button class="btn btn-primary">
+            <a class="nav-link text-dark" asp-area="" asp-controller="Products" asp-action="Index">Cick Me</a>
+   </button>
+    </main>
+
+    <footer>
+        &copy; 2025 Your Website. All rights reserved.
+    </footer>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

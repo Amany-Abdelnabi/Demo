@@ -1,0 +1,49 @@
+﻿@model Product //نوع الموديل ال انت متخصص فيه  product واحد
+<!--model-->
+<!--Card-->
+
+<h2 class="alert alert-danger text-center">Are You Sure You Want To Delete This Product</h2>
+<div class="card" style="width: 28rem;">
+    <img src="/Images/@Model.Image" class="card-img-top" alt="...">
+    <div class="card-body">
+        <!--product-->
+        <h5 class="card-title">  @Model.Name - @Model.Price</h5>
+        <p class="card-text">@Model.Description</p>
+        <p class="card-text">@Model.category.Name (@Model.category.Description)</p>
+        <a href="#" class="  btn btn-primary ">Go somewhere</a>
+    </div>
+</div>
+
+<div class="row"> 
+
+    <form class="col-4" method="post" asp-controller="Products" asp-action="DeleteCurrent">
+
+        <input type="hidden" asp-for="Id" />
+        <button type="submit" class="btn btn-danger col-12">Delete</button>
+
+    </form>
+
+</div>
+<!--Index-->
+<a asp-action="Getinexview">
+    <!--ACTION FOR YOU "bACK TO LIST(Index)"-->
+    Back To List
+</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

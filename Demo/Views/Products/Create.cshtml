@@ -1,0 +1,112 @@
+﻿@* 
+@model Product
+
+<h1 class="alert alert-info text-center" >Create Many Ptoducts  </h1>
+
+  <div class="row">														 <!--width of div-->
+	<form method="post" asp-controller="Products" asp-action="AddNew" class="col-4" enctype="multipart/form-data">
+
+		
+
+		 <div>
+			<label class="label">Full Name</label>	  <!--Model-->
+			<input type="text" asp-for="Name"  class="form-control"/>
+			<span asp-validation-for="Name" class="text-danger"></span>
+		  </div>
+
+		<div>
+			<label class="label">Price</label>	  <!--Model-->
+			<input type="text" asp-for="Price" class="form-control" />
+			<span asp-validation-for="Price" class="text-danger"></span>
+		</div>
+
+		<div>
+			<label class="label"> Description</label>	<!--Model-->
+			<input type="text" asp-for="Description" class="form-control" />
+			<span asp-validation-for="Description" class="text-danger"></span>
+		</div>
+
+		<div>
+			<label class="label">Image</label>
+			<input type="file" asp-for="ImageFile" class="form-control" />
+			<span asp-validation-for="Image" class="text-danger"></span>
+		</div>
+
+
+													<!--width of only form-->
+		<button type="submit" class=" btn btn-primary col-12 mt-2 " >
+			Add	To List
+		</button>
+                                                                                     <!--width of only form-->
+		<a asp-controller="Products" asp-action="Getinexview" class=" btn btn-secondary col-12 mt-1">Back To List</a>
+	  </form>																	 
+
+  </div>
+ *@
+
+
+
+
+
+
+
+
+
+
+  <!---------------------------------------------------------------------------------->
+  @model Product
+
+<h1 class="alert alert-info text-center">Create Many Ptoducts</h1>
+
+<div class="row">
+    <form method="post" asp-controller="Products" asp-action="AddNew" class="col-4" enctype="multipart/form-data">
+
+        <div>
+            <label class="label">Full Name</label>
+            <input type="text" asp-for="Name" class="form-control" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+
+        <div>
+            <label class="label">Price</label>
+            <input type="text" asp-for="Price" class="form-control" />
+            <span asp-validation-for="Price" class="text-danger"></span>
+        </div>
+
+        <div>
+            <label class="label">Description</label>
+            <input type="text" asp-for="Description" class="form-control" />
+            <span asp-validation-for="Description" class="text-danger"></span>
+        </div>
+
+        <div>
+            <label class="label">Image</label>
+            <input type="file" asp-for="ImageFile" class="form-control" />
+            <span asp-validation-for="Image" class="text-danger"></span>
+        </div>
+
+        <div>
+            <label class="label">Category</label>
+            <select asp-for="CategoryId" asp-items="ViewBag.Categories" class="form-control">
+                <option value="">-- Select Category --</option>
+            </select>
+            <span asp-validation-for="CategoryId" class="text-danger"></span>
+        </div>
+
+        <button type="submit" class="btn btn-primary col-12 mt-2">
+            Add To List
+        </button>
+
+        <a asp-controller="Products" asp-action="Getinexview" class="btn btn-secondary col-12 mt-1">Back To List</a>
+    </form>
+</div>
+
+
+
+
+
+
+
+
+
+

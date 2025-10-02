@@ -1,0 +1,90 @@
+﻿ @model List<Product>
+<h1 class="alert alert-dark text-center">Index Of Products </h1>
+<a asp-controller="Products" asp-action="GetCreateView" class="btn btn-dark mb-3"> Create More</a>
+
+<form method="get" asp-controller="Products" asp-action="Getinexview" calss="col-2">
+	<div class="input-group">
+         <input  type="text" name="search" class="form-control" value="@ViewBag.currentsearch"/>
+         <button type="submit" class="btn btn-secondary">
+            <i class="bi bi-search"></i>
+         </button>
+    </div>
+   </form> 
+@{
+
+	@if (Model.Any())
+	{
+		<table class="table table-bordered ">
+			<caption class="caption-top text-center fs-3"> All Products</caption>
+			<thead class="table-dark">
+				<tr>  <th>name</th> <th>price</th> <th>description</th> <th>model</th> </tr>
+			</thead>
+			<tbody>
+				@foreach (var item in Model)
+				{
+					<tr>
+							
+						<td>@item.Name</td>
+						<td>@item.Price</td>
+						<td>@item.Description</td>
+						<td><img src="~/Images/@item.Image" style="width:100px"/> </td>
+					
+						<td>
+							<a asp-controller="Products" asp-action="GetDeatilsView" asp-route-id="@item.Id" class="btn btn-secondary" title="Details">
+								 <i class="bi bi-list-ul"></i>	
+							</a>
+							<a asp-controller="Products" asp-action="GetDeleteView" asp-route-id="@item.Id" class="btn btn-danger" title=" Delete">
+
+								<i class="bi bi-trash-fill"></i>
+							</a>
+							<a asp-controller="Products" asp-action="GetEditView" asp-route-id="@item.Id" class="btn btn-primary" title="Edit">
+
+							     <i class="bi bi-pencil-square"></i>	 
+							</a>
+
+							
+						</td>
+						
+					</tr>
+
+				}
+
+			</tbody>
+			<tfoot>
+				@* before colspan=2 *@
+				<tr><th colspan="2" style="text-align:right">Total</th><th>@Model.Sum(e => e.Price)</th></tr>
+			</tfoot>
+		</table>
+	}
+	else
+	{
+		<h2 class=" alert alert-danger text-center"> there is no Products in the table.</h2>
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
