@@ -48,5 +48,10 @@ namespace Demo.Models
         [DeleteBehavior(DeleteBehavior.NoAction)]
          public Category category { get; set; }
 
+        //Changes
+        
+        // public string? type { get; set; }
+        
+
     }
 }

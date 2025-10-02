@@ -1,4 +1,5 @@
 ﻿using Demo.Models;
+using Microsoft.AspNetCore.Components.Server.ProtectedBrowserStorage;
 using Microsoft.EntityFrameworkCore;
 
 namespace Demo.Data
@@ -16,8 +17,32 @@ namespace Demo.Data
             optionsBuilder.UseSqlServer("Server=DESKTOP-M93O3VJ\\SQLEXPRESS03;Database=Demo;Trusted_Connection=True;TrustServerCertificate=True"
              );
 
-            
+
+                        
+        
         }
+        ///Changes  
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Category>().HasData
+                (
+                       new Product { Id = 32, Description = "default", Name = "amany" }
+
+                );
+
+
+        }
+
+
+
+
+
+
+
+
+
+
 
     }
 }
