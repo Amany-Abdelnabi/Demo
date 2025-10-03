@@ -30,6 +30,11 @@ namespace Demo.Data
                        new Product { Id = 32, Description = "default", Name = "amany" }
 
                 );
+                modelBuilder.Entity<Category>().HasData
+                (
+                       new Product { Id = 33, Description = "default", Name = "Ahmed" }
+
+                );
 
 
         }
