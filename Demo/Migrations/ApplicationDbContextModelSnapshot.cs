@@ -47,6 +47,12 @@ namespace Demo.Migrations
                             Id = 32,
                             Description = "default",
                             Name = "amany"
+                        },
+                        new
+                        {
+                            Id = 33,
+                            Description = "default",
+                            Name = "Ahmed"
                         });
                 });
 

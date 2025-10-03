@@ -35,6 +35,11 @@ namespace Demo.Data
                        new Product { Id = 33, Description = "default", Name = "Ahmed" }
 
                 );
+            modelBuilder.Entity<Category>().HasData
+                (
+                       new Product { Id = 35, Description = "default", Name = "shahd" }
+
+                );
 
 
         }
